@@ -17,6 +17,8 @@
 
   <!-- custom css -->
   <link rel="stylesheet" href="css/styles.css">
+
+  <script src="javascript/locations.js"></script>
 </head>
 
 <body>
@@ -33,13 +35,10 @@
           <input class="form-control" type="date" id="date" required><br>
           <label for="time">Time:</label>
           <input class="form-control" type="time" min="00:00" max="23:59" id="time" required><br>
-
-
-            <button type="submit" class="btn btn-secondary">Search</button>
-
+          <button type="submit" class="btn btn-secondary" onclick="loadLocation()">Search</button>
         </div>
         <div class="box">
-          <p>Location here</p>
+          <div id="locations"></div>
         </div>
       </div>
 
@@ -48,7 +47,9 @@
           <p>Weather forecast here</p>
         </div>
         <div class="box">
-          <p>Traffic image here</p>
+          <div id="traffic-image">
+
+          </div>
         </div>
       </div>
     </div>

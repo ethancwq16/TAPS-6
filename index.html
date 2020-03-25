@@ -7,21 +7,59 @@
   <title>TAPS#6</title>
 
   <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
-  <!-- font awesome -->
-
-  <!-- google fonts -->
+  <!-- fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Merriweather&display=swap" >
 
   <!-- custom css -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-  <div>
+  <div class="container-fluid">
+
+    <div class="row header">
+      <header>Header here!</header>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 left-column">
+        <div class="box form-group">
+          <label for="date">Date:</label>
+          <input class="form-control" type="date" id="date" required><br>
+          <label for="time">Time:</label>
+          <input class="form-control" type="time" min="00:00" max="23:59" id="time" required><br>
+
+
+            <button type="submit" class="btn btn-secondary">Search</button>
+
+        </div>
+        <div class="box">
+          <p>Location here</p>
+        </div>
+      </div>
+
+      <div class="col-md-8 right-column">
+        <div class="box">
+          <p>Weather forecast here</p>
+        </div>
+        <div class="box">
+          <p>Traffic image here</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row footer">
+      <footer>Footer here!</footer>
+    </div>
+
   </div>
 
-  <footer>
-  </footer>
+
 </body>
 
 </html>

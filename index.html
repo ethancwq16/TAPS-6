@@ -13,10 +13,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <!-- fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Merriweather&display=swap" >
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <!-- custom css / javascript -->
   <link rel="stylesheet" href="css/styles.css">
   <script src="javascript/loadareas.js"></script>
   <script src="javascript/loadimage.js"></script>
+  <script src="javascript/index.js"></script>
 </head>
 
 <body>
@@ -31,17 +33,19 @@
     <div class="row content">
 
       <!-- left column: search date, time, location -->
-      <div class="col-md-4 left-column">
+      <div class="col-md-4 col-sm-12 left-column">
         <div class="box form-group">
           <label for="date"> Date: </label>
           <input class="form-control" type="date" id="date" required><br>
           <label for="time"> Time: </label>
           <input class="form-control" type="time" min="00:00" max="23:59" id="time" required><br>
-          <button type="submit" class="btn btn-secondary" onclick="loadAreas()"> Search </button>
+          <button type="submit" class="btn btn-secondary" id="search" onclick="loadAreas()"> Search </button>
         </div>
         <div class="box form-group">
           <label for="location"> Location:</label>
-          <select class="form-control" id="location" onchange="loadImage()"></select>
+          <select class="form-control" id="location"></select>
+          <br>
+          <button type="submit" class="btn btn-secondary" id="searchImage" onclick="loadImage()"> Search </button>
         </div>
       </div>
 

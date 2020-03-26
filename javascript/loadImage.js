@@ -13,10 +13,8 @@ function loadImage() {
       for (var i = 0; i < traffic.items[0].cameras.length; i++) {
         var trafficLocation = JSON.stringify(traffic.items[0].cameras[i].location)
         if (trafficLocation == location) {
-          console.log(traffic.items[0].cameras[i].image);
-          //traffic.items[0].cameras[i].image
+          // console.log(traffic.items[0].cameras[i].image);
           document.getElementById("traffic-img").innerHTML = '<img src="' + traffic.items[0].cameras[i].image + '">';
-
         }
       }
     }

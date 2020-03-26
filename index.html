@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <script src="javascript/loadareas.js"></script>
   <script src="javascript/loadimage.js"></script>
-  <script src="javascript/index.js"></script>
+  <script src="javascript/loadweather.js"></script>
 </head>
 
 <body>
@@ -26,6 +26,7 @@
 
     <div class="row header">
       <header> TAPS #6 Technical Assessment Q1: Frontend Technical Assessment </header>
+      <br>
       <h1> Weather Forecast & Traffic Cam Website </h1>
     </div>
 
@@ -43,9 +44,11 @@
         </div>
         <div class="box form-group">
           <label for="location"> Location:</label>
-          <select class="form-control" id="location"></select>
+          <select class="form-control" id="location">
+            <option value=""> Choose a location. </option>
+          </select>
           <br>
-          <button type="submit" class="btn btn-secondary" id="searchImage" onclick="loadImage()"> Search </button>
+          <button type="submit" class="btn btn-secondary" id="searchImage" onclick="loadImage(); loadWeather();"> Search </button>
         </div>
       </div>
 

@@ -1,6 +1,6 @@
 function loadImage() {
   var location = document.getElementById("location").value;
-  // console.log(location);
+  console.log(location);
 
   var date = document.getElementById("date").value;
   var time = document.getElementById("time").value;

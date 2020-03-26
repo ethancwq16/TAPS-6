@@ -4,63 +4,74 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <title>TAPS#6</title>
+  <title>TAPS #6</title>
 
   <!-- bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
   <!-- fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Merriweather&display=swap" >
-
-  <!-- custom css -->
+  <!-- custom css / javascript -->
   <link rel="stylesheet" href="css/styles.css">
-
-  <script src="javascript/locations.js"></script>
+  <script src="javascript/loadareas.js"></script>
+  <script src="javascript/loadimage.js"></script>
 </head>
 
 <body>
   <div class="container-fluid">
 
     <div class="row header">
-      <header>Header here!</header>
+      <header> TAPS #6 Technical Assessment Q1: Frontend Technical Assessment </header>
+      <h1> Weather Forecast & Traffic Cam Website </h1>
     </div>
 
-    <div class="row">
+    <!-- start of content -->
+    <div class="row content">
+
+      <!-- left column: search date, time, location -->
       <div class="col-md-4 left-column">
         <div class="box form-group">
-          <label for="date">Date:</label>
+          <label for="date"> Date: </label>
           <input class="form-control" type="date" id="date" required><br>
-          <label for="time">Time:</label>
+          <label for="time"> Time: </label>
           <input class="form-control" type="time" min="00:00" max="23:59" id="time" required><br>
-          <button type="submit" class="btn btn-secondary" onclick="loadLocation()">Search</button>
+          <button type="submit" class="btn btn-secondary" onclick="loadAreas()"> Search </button>
         </div>
-        <div class="box">
-          <div id="locations"></div>
+        <div class="box form-group">
+          <label for="location"> Location:</label>
+          <select class="form-control" id="location" onchange="loadImage()"></select>
         </div>
       </div>
 
+      <!-- right column: display weather info, traffic image based on search -->
       <div class="col-md-8 right-column">
         <div class="box">
-          <p>Weather forecast here</p>
+          <div class="weather-forecast" id="weather-forecast">
+            <p> Weather forecast here. </p>
+          </div>
         </div>
         <div class="box">
-          <div id="traffic-image">
-
+          <div class="traffic-img" id="traffic-img">
+            <p> Traffic image here. </p>
           </div>
         </div>
       </div>
+
     </div>
+    <!-- end of content -->
 
     <div class="row footer">
-      <footer>Footer here!</footer>
+      <footer>
+        &copy; <br>
+        This application is done for TAPS #6 Technical Assessment.<br>
+        <br>
+        Last update: 26 March 2020<br>
+      </footer>
     </div>
 
   </div>
-
-
 </body>
 
 </html>

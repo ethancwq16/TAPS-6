@@ -1,7 +1,5 @@
 function loadImage() {
   var location = document.getElementById("location").value;
-  console.log(location);
-
   var date = document.getElementById("date").value;
   var time = document.getElementById("time").value;
   var date_time = date + "T" + time.substring(0,2) + "%3A" +  time.substring(3,5) + "%3A00%2B08%3A00";
